@@ -10,7 +10,7 @@ p1  <-  plot_facets ( sas_data )
 plot_map(sas_data, lon_min =  min(sas_data$lon) , lon_max =  max(sas_data$lon) , lat_min =  min(sas_data$lat) , lat_max = max(sas_data$lat)) 
 
 
-sas_data <- sas_data %>%
+sas_data_rate <- sas_data %>%
   group_by(id) %>%
   summarise(rate = max(cumdist)/ max(cumtime))
 
